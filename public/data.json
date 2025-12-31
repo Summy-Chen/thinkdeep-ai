@@ -1,0 +1,62 @@
+{
+  "date": "2025-12-31",
+  "articles": [
+    {
+      "id": "ed255da3a6cb2514f53c622efd1f888d",
+      "title": "[D] How do Dating Apps Rank?",
+      "link": "https://www.reddit.com/r/MachineLearning/comments/1q0g0p6/d_how_do_dating_apps_rank/",
+      "summary": "Dear MLEs - I am very curious about how recommendation systems of most dating apps like Tinder, Bumble etc. work.. I’ll be very grateful for some feedback on my understanding, especially if you’ve worked on something similar 🙏 TL:DR Dating apps have two goals: a) Retain attractive profiles b) monetize low/mid profiles If you are a free user, you see profiles ranked by Prob (you would swipe right) If you are attractive, this leads to some success. But if you are low or mid, you can swipe right ti...",
+      "published": "2025-12-31T15:45:47+00:00",
+      "source_id": "reddit_ml",
+      "source_name": "Reddit Machine Learning",
+      "category": "community",
+      "priority": 3
+    },
+    {
+      "id": "000454b98fa9244358c682fa30464f9f",
+      "title": "[D] What do you think about the Lady Lovelace quote in Turings „Computing Machinery and Intelligene\" (1950) w.r.t. the idea of imitation versus new states of mind?",
+      "link": "https://www.reddit.com/r/MachineLearning/comments/1q0f3j6/d_what_do_you_think_about_the_lady_lovelace_quote/",
+      "summary": "I think Turing goes much further in his work than the current state of data-driven models really allows. But still I'm curious; what is your view on this discussion (Lovelace vs. Turing; argument 6 in his paper) about whether machines can really produce something new especially if you think about the current generative Al models? Is the point of &quot;never do anything really new&quot; basically the core of the imitation game, or do you think machines will be capable of doing something new? But ...",
+      "published": "2025-12-31T15:06:10+00:00",
+      "source_id": "reddit_ml",
+      "source_name": "Reddit Machine Learning",
+      "category": "community",
+      "priority": 3
+    },
+    {
+      "id": "73fd44a5e09f6e5d3288b496ab01947e",
+      "title": "[P] My DC-GAN works better then ever!",
+      "link": "https://www.reddit.com/r/MachineLearning/comments/1q0cmvw/p_my_dcgan_works_better_then_ever/",
+      "summary": "I recently made a Deep Convolutional Generative adviseral Network which had some architecture problem at the starting but now it works . It still takes like 20mins for 50 epochs . Here are some images It generated. I want to know if my architecture can be reduced to make it less gpu consuming. &#32; submitted by &#32; /u/Jumbledsaturn52 [link] &#32; [comments]",
+      "published": "2025-12-31T13:09:06+00:00",
+      "source_id": "reddit_ml",
+      "source_name": "Reddit Machine Learning",
+      "category": "community",
+      "priority": 3
+    },
+    {
+      "id": "a40fecf58ffb24661180b0f0715f5683",
+      "title": "Show HN: Use Claude Code to Query 600 GB Indexes over Hacker News, ArXiv, etc.",
+      "link": "https://exopriors.com/scry",
+      "summary": "Paste in my prompt to Claude Code with an embedded API key for accessing my public readonly SQL+vector database, and you have a state-of-the-art research tool over Hacker News, arXiv, LessWrong, and dozens of other high-quality public commons sites. Claude whips up the monster SQL queries that safely run on my machine, to answer your most nuanced questions.There's also an Alerts functionality, where you can just ask Claude to submit a SQL query as an alert, and you'll be emailed when the ultra n...",
+      "published": "2025-12-31T07:47:44+00:00",
+      "source_id": "hn_ai",
+      "source_name": "Hacker News AI",
+      "category": "community",
+      "priority": 2,
+      "chinese_summary": "Paste in my prompt to Claude Code with an embedded API key for accessing my public readonly SQL+vector database, and you have a state-of-the-art research tool over Hacker News, arXiv, LessWrong, and d..."
+    }
+  ],
+  "analysis": {
+    "overview": "今日共收集到 4 篇AI领域相关文章。",
+    "highlights": [
+      "[D] How do Dating Apps Rank?",
+      "[D] What do you think about the Lady Lovelace quote in Turings „Computing Machinery and Intelligene\" (1950) w.r.t. the idea of imitation versus new states of mind?",
+      "[P] My DC-GAN works better then ever!"
+    ],
+    "trends": [
+      "分析生成失败，请查看详细列表"
+    ],
+    "recommendation": "[D] How do Dating Apps Rank?"
+  }
+}
