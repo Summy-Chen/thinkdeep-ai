@@ -1,0 +1,74 @@
+INFO:__main__:==================================================
+INFO:__main__:开始生成 AI 每日简报
+INFO:__main__:==================================================
+INFO:__main__:步骤 1/4: 抓取RSS源...
+INFO:src.rss_fetcher:正在抓取: TechCrunch AI
+INFO:src.rss_fetcher:正在抓取: VentureBeat AI
+INFO:src.rss_fetcher:正在抓取: The Verge AI
+INFO:src.rss_fetcher:正在抓取: MIT Technology Review
+INFO:src.rss_fetcher:正在抓取: Wired AI
+INFO:src.rss_fetcher:从 The Verge AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: OpenAI Blog
+WARNING:src.rss_fetcher:抓取 Wired AI 失败: 404 Client Error: Not Found for url: https://www.wired.com/feed/category/ai/latest/rss
+INFO:src.rss_fetcher:正在抓取: Google AI Blog
+INFO:src.rss_fetcher:从 TechCrunch AI 获取了 3 篇新文章
+INFO:src.rss_fetcher:正在抓取: Google DeepMind
+INFO:src.rss_fetcher:从 MIT Technology Review 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Microsoft AI
+INFO:src.rss_fetcher:从 VentureBeat AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Anthropic
+INFO:src.rss_fetcher:从 Google AI Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: NVIDIA Blog
+WARNING:src.rss_fetcher:抓取 Anthropic 失败: 404 Client Error: Not Found for url: https://www.anthropic.com/index.xml
+INFO:src.rss_fetcher:正在抓取: Berkeley AI Research
+INFO:src.rss_fetcher:从 Google DeepMind 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: MIT AI News
+INFO:src.rss_fetcher:从 Microsoft AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: arXiv CS.AI
+INFO:src.rss_fetcher:从 OpenAI Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: arXiv CS.LG (Machine Learning)
+INFO:src.rss_fetcher:从 NVIDIA Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Simon Willison's Blog
+INFO:src.rss_fetcher:从 Berkeley AI Research 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Lilian Weng's Blog
+INFO:src.rss_fetcher:从 MIT AI News 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Hugging Face Blog
+INFO:src.rss_fetcher:从 Lilian Weng's Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Hacker News AI
+INFO:src.rss_fetcher:从 Hugging Face Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Reddit Machine Learning
+INFO:src.rss_fetcher:从 arXiv CS.LG (Machine Learning) 获取了 0 篇新文章
+INFO:src.rss_fetcher:从 arXiv CS.AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:从 Reddit Machine Learning 获取了 0 篇新文章
+INFO:src.rss_fetcher:从 Simon Willison's Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:从 Hacker News AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:总共获取了 3 篇新文章
+INFO:__main__:共获取 3 篇文章
+INFO:__main__:步骤 2/4: 使用LLM进行智能分析...
+INFO:httpx:HTTP Request: POST https://api.manus.im/api/llm-proxy/v1/chat/completions "HTTP/1.1 400 Bad Request"
+WARNING:src.llm_analyzer:生成综合分析失败: Error code: 400 - {'error': 'Unsupported model. Only the following models are allowed: gemini-2.5-flash, gpt-4.1-mini, gpt-4.1-nano'}
+INFO:httpx:HTTP Request: POST https://api.manus.im/api/llm-proxy/v1/chat/completions "HTTP/1.1 400 Bad Request"
+WARNING:src.llm_analyzer:生成摘要失败: Error code: 400 - {'error': 'Unsupported model. Only the following models are allowed: gemini-2.5-flash, gpt-4.1-mini, gpt-4.1-nano'}
+INFO:httpx:HTTP Request: POST https://api.manus.im/api/llm-proxy/v1/chat/completions "HTTP/1.1 400 Bad Request"
+WARNING:src.llm_analyzer:生成摘要失败: Error code: 400 - {'error': 'Unsupported model. Only the following models are allowed: gemini-2.5-flash, gpt-4.1-mini, gpt-4.1-nano'}
+INFO:httpx:HTTP Request: POST https://api.manus.im/api/llm-proxy/v1/chat/completions "HTTP/1.1 400 Bad Request"
+WARNING:src.llm_analyzer:生成摘要失败: Error code: 400 - {'error': 'Unsupported model. Only the following models are allowed: gpt-4.1-nano, gemini-2.5-flash, gpt-4.1-mini'}
+INFO:__main__:LLM分析完成
+INFO:__main__:步骤 3/4: 生成Markdown简报...
+INFO:src.digest_generator:简报已保存到: /home/ubuntu/ai_daily_digest/output/ai_digest_20251231.md
+INFO:__main__:简报已保存到: /home/ubuntu/ai_daily_digest/output/ai_digest_20251231.md
+INFO:__main__:网页数据已更新到: /home/ubuntu/ai-digest-web/client/public/data.json
+INFO:__main__:步骤 4/4: 发送邮件...
+ERROR:src.email_sender:SMTP错误: (-1, b'\x00\x00\x00')
+WARNING:__main__:邮件发送失败
+INFO:__main__:==================================================
+INFO:__main__:简报生成完成！
+INFO:__main__:==================================================
+
+==================================================
+运行结果:
+  - 成功: True
+  - 文章数: 3
+  - 文件路径: /home/ubuntu/ai_daily_digest/output/ai_digest_20251231.md
+  - 邮件已发送: False
+==================================================

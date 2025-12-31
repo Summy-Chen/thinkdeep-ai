@@ -1,0 +1,53 @@
+{
+  "date": "2025-12-31",
+  "articles": [
+    {
+      "id": "d8e03434552f51b48ceb6a67cbfa5c16",
+      "title": "Plaud Note Pro is an excellent AI-powered recorder that I carry everywhere",
+      "link": "https://techcrunch.com/2025/12/29/plaud-note-pro-is-an-excellent-ai-powered-recorder-that-i-carry-everywhere/",
+      "summary": "Plaud Note Pro is a $179 notetaker, which is an excellent recording device first",
+      "published": "2025-12-29T18:00:00+00:00",
+      "source_id": "techcrunch_ai",
+      "source_name": "TechCrunch AI",
+      "category": "business",
+      "priority": 1,
+      "chinese_summary": "Plaud Note Pro is a $179 notetaker, which is an excellent recording device first"
+    },
+    {
+      "id": "fae7c604c6c2f6feebfe625e8f5aa79f",
+      "title": "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others",
+      "link": "https://techcrunch.com/2025/12/29/how-to-use-the-new-chatgpt-app-integrations-including-doordash-spotify-uber-and-others/",
+      "summary": "Learn how to use Spotify, Canva, Figma, Expedia, and other apps directly in ChatGPT.",
+      "published": "2025-12-29T15:51:40+00:00",
+      "source_id": "techcrunch_ai",
+      "source_name": "TechCrunch AI",
+      "category": "business",
+      "priority": 1,
+      "chinese_summary": "Learn how to use Spotify, Canva, Figma, Expedia, and other apps directly in ChatGPT."
+    },
+    {
+      "id": "17d5ac27e189fe97fb645e1ae1ea3771",
+      "title": "VCs predict strong enterprise AI adoption next year — again",
+      "link": "https://techcrunch.com/2025/12/29/vcs-predict-strong-enterprise-ai-adoption-next-year-again/",
+      "summary": "More than 20 venture capitalists share their thoughts on AI agents, enterprise AI budgets, and more for 2026.",
+      "published": "2025-12-29T14:00:00+00:00",
+      "source_id": "techcrunch_ai",
+      "source_name": "TechCrunch AI",
+      "category": "business",
+      "priority": 1,
+      "chinese_summary": "More than 20 venture capitalists share their thoughts on AI agents, enterprise AI budgets, and more for 2026."
+    }
+  ],
+  "analysis": {
+    "overview": "今日共收集到 3 篇AI领域相关文章。",
+    "highlights": [
+      "Plaud Note Pro is an excellent AI-powered recorder that I carry everywhere",
+      "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others",
+      "VCs predict strong enterprise AI adoption next year — again"
+    ],
+    "trends": [
+      "请查看详细文章列表了解更多"
+    ],
+    "recommendation": "Plaud Note Pro is an excellent AI-powered recorder that I carry everywhere"
+  }
+}

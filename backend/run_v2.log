@@ -1,0 +1,55 @@
+INFO:__main__:==================================================
+INFO:__main__:开始生成 AI 每日简报
+INFO:__main__:==================================================
+INFO:__main__:步骤 1/4: 抓取RSS源...
+INFO:src.rss_fetcher:正在抓取: TechCrunch AI
+INFO:src.rss_fetcher:正在抓取: VentureBeat AI
+INFO:src.rss_fetcher:正在抓取: The Verge AI
+INFO:src.rss_fetcher:正在抓取: MIT Technology Review
+INFO:src.rss_fetcher:正在抓取: Wired AI
+WARNING:src.rss_fetcher:抓取 Wired AI 失败: 404 Client Error: Not Found for url: https://www.wired.com/feed/category/ai/latest/rss
+INFO:src.rss_fetcher:正在抓取: OpenAI Blog
+INFO:src.rss_fetcher:从 TechCrunch AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Google AI Blog
+INFO:src.rss_fetcher:从 MIT Technology Review 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Google DeepMind
+INFO:src.rss_fetcher:从 VentureBeat AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Microsoft AI
+INFO:src.rss_fetcher:从 OpenAI Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Anthropic
+INFO:src.rss_fetcher:从 Google DeepMind 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: NVIDIA Blog
+WARNING:src.rss_fetcher:抓取 Anthropic 失败: 404 Client Error: Not Found for url: https://www.anthropic.com/index.xml
+INFO:src.rss_fetcher:正在抓取: Berkeley AI Research
+WARNING:src.rss_fetcher:抓取 The Verge AI 失败: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+INFO:src.rss_fetcher:正在抓取: MIT AI News
+INFO:src.rss_fetcher:从 Google AI Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: arXiv CS.AI
+INFO:src.rss_fetcher:从 Berkeley AI Research 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: arXiv CS.LG (Machine Learning)
+INFO:src.rss_fetcher:从 NVIDIA Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Simon Willison's Blog
+INFO:src.rss_fetcher:从 Microsoft AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Lilian Weng's Blog
+INFO:src.rss_fetcher:从 Lilian Weng's Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Hugging Face Blog
+INFO:src.rss_fetcher:从 Simon Willison's Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Hacker News AI
+INFO:src.rss_fetcher:从 Hugging Face Blog 获取了 0 篇新文章
+INFO:src.rss_fetcher:正在抓取: Reddit Machine Learning
+INFO:src.rss_fetcher:从 arXiv CS.LG (Machine Learning) 获取了 0 篇新文章
+INFO:src.rss_fetcher:从 Hacker News AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:从 MIT AI News 获取了 0 篇新文章
+INFO:src.rss_fetcher:从 arXiv CS.AI 获取了 0 篇新文章
+INFO:src.rss_fetcher:从 Reddit Machine Learning 获取了 0 篇新文章
+INFO:src.rss_fetcher:总共获取了 0 篇新文章
+WARNING:__main__:未获取到任何新文章
+
+==================================================
+运行结果:
+  - 成功: False
+  - 文章数: 0
+  - 文件路径: None
+  - 邮件已发送: False
+  - 错误: 未获取到任何新文章
+==================================================

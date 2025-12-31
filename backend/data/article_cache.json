@@ -1,0 +1,222 @@
+{
+  "8e92fb2dac2825d798f7a7a38c4cc08b": {
+    "date": "2025-12-31T04:11:23.206180",
+    "title": "Bidirectional RAG: Safe Self-Improving Retrieval-Augmented Generation Through Multi-Stage Validation"
+  },
+  "fd748f7a24a86f6ef2d1234ea4c55bcb": {
+    "date": "2025-12-31T04:11:23.206193",
+    "title": "Emergent Persuasion: Will LLMs Persuade Without Being Prompted?"
+  },
+  "d25896da6a91e77cc649d4535e56b5f3": {
+    "date": "2025-12-31T04:11:23.206198",
+    "title": "[D] Monthly Who's Hiring and Who wants to be Hired?"
+  },
+  "fe4cddf05a508ef6607a9a8653503327": {
+    "date": "2025-12-31T04:11:23.206202",
+    "title": "LLVM AI tool policy: human in the loop"
+  },
+  "172549f0397baaba40fa80a2b27ce0f3": {
+    "date": "2025-12-31T04:11:23.206205",
+    "title": "Quoting Armin Ronacher"
+  },
+  "0e770cc1367420a2ba1d291968cea6c6": {
+    "date": "2025-12-31T04:11:23.206208",
+    "title": "TIL: Downloading archived Git repositories from archive.softwareheritage.org"
+  },
+  "1b22cc921364782d2c81b4da8e485ef1": {
+    "date": "2025-12-31T04:11:23.206213",
+    "title": "OpenAI's cash burn will be one of the big bubble questions of 2026"
+  },
+  "da2b1ef214692facc35313746c672f75": {
+    "date": "2025-12-31T04:11:23.206220",
+    "title": "[P] The State Of LLMs 2025: Progress, Problems, and Predictions"
+  },
+  "6044ff3a98366573a12a3d20518cdc53": {
+    "date": "2025-12-31T04:12:16.503867",
+    "title": "[D] AI coding agents for DS/ML (notebooks) - what's your workflow?"
+  },
+  "33c3a9672be329a8c6fa6fa695317847": {
+    "date": "2025-12-31T04:12:16.503884",
+    "title": "GamiBench: Evaluating Spatial Reasoning and 2D-to-3D Planning Capabilities of MLLMs with Origami Fol"
+  },
+  "e2fd2cdeccc72499b328f576bc75e21f": {
+    "date": "2025-12-31T04:12:16.503889",
+    "title": "Toward Equitable Recovery: A Fairness-Aware AI Framework for Prioritizing Post-Flood Aid in Banglade"
+  },
+  "be8f6ce022a6afa2103fe04e7541f1ab": {
+    "date": "2025-12-31T04:12:16.503894",
+    "title": "With Great Capabilities Come Great Responsibilities: Introducing the Agentic Risk & Capability Frame"
+  },
+  "5cccf8919cb74fbecbb798fbda1cdbbc": {
+    "date": "2025-12-31T04:12:16.503898",
+    "title": "We are not able to identify AI-generated images"
+  },
+  "0311a466f068cfd750862331b743840f": {
+    "date": "2025-12-31T04:12:16.503902",
+    "title": "Shape of Thought: When Distribution Matters More than Correctness in Reasoning Tasks"
+  },
+  "fe090d932685021bc254741f11ec5054": {
+    "date": "2025-12-31T04:12:16.503907",
+    "title": "[N] ACL 2026 (ARR Jan 2026), No Rebuttal period?"
+  },
+  "0e87ff5681e229e9aa7cbb03ae0ffc36": {
+    "date": "2025-12-31T04:12:16.503915",
+    "title": "Quoting Liz Fong-Jones"
+  },
+  "4f0c2cc7589aae0b555d9eca51af69a9": {
+    "date": "2025-12-31T04:12:16.503920",
+    "title": "Overcoming Nonsmoothness and Control Chattering in Nonconvex Optimal Control Problems"
+  },
+  "84ee5cfcda4c6770b487d6590c9e2224": {
+    "date": "2025-12-31T04:12:16.503925",
+    "title": "The 70% AI productivity myth: why most companies aren't seeing the gains"
+  },
+  "e63623b188f692910d4dd2e9f3534776": {
+    "date": "2025-12-31T04:12:16.503930",
+    "title": "The Machine Learning \u201cAdvent Calendar\u201d Bonus 1: AUC in Excel"
+  },
+  "2f6279cdb25018935689697531e0ee54": {
+    "date": "2025-12-31T04:12:16.503935",
+    "title": "[D] Project Silicon: Differentiable CPU Simulators for Gradient-Based Assembly Optimization"
+  },
+  "9319e36b9dc444915fb48c92f31713fa": {
+    "date": "2025-12-31T04:12:16.503940",
+    "title": "[D] VL-JEPA: Why predicting embeddings beats generating tokens - 2.85x faster decoding with 50% fewe"
+  },
+  "a28ce13d5ce81fec92d54a37636e55ff": {
+    "date": "2025-12-31T04:12:16.503944",
+    "title": "Agents Under the Curve (AUC)"
+  },
+  "66472561b23704d44818ec71ee4a2b53": {
+    "date": "2025-12-31T04:12:16.503949",
+    "title": "[R] End-to-End Test-Time Training for Long Context"
+  },
+  "e598382613c14df85c74564f28049f54": {
+    "date": "2025-12-31T04:12:16.503952",
+    "title": "shot-scraper 1.9"
+  },
+  "68e414ccceb28b729ff837772326d329": {
+    "date": "2025-12-31T04:12:16.503956",
+    "title": "Show HN: Stop Claude Code from forgetting everything"
+  },
+  "4381babecc0316ef5522402c235bd401": {
+    "date": "2025-12-31T04:12:16.503960",
+    "title": "AI employees don't pay taxes"
+  },
+  "a639d5b5731bcdbb13cf25bab7ffcecd": {
+    "date": "2025-12-31T04:12:16.503964",
+    "title": "Quoting D. Richard Hipp"
+  },
+  "e4d4d0c8b72094d1fe78056e360041da": {
+    "date": "2025-12-31T04:12:16.503968",
+    "title": "Quoting Jason Gorman"
+  },
+  "f6569162836b971fbfce1a093f75e729": {
+    "date": "2025-12-31T04:12:16.503973",
+    "title": "Copyright Release for Contributions To SQLite"
+  },
+  "001111f7d0e4de1958ab94f7d650540c": {
+    "date": "2025-12-31T04:12:16.503977",
+    "title": "Meta's ads tools started switching out top-performing ads with AI-generated ones"
+  },
+  "844e88bc3a5f7d82b1754457511a80a7": {
+    "date": "2025-12-31T04:12:16.503980",
+    "title": "AI is forcing us to write good code"
+  },
+  "cb8aa072a833953e5acd805ed4753876": {
+    "date": "2025-12-31T04:12:16.503984",
+    "title": "The latest AI news we announced in December"
+  },
+  "b064baf779a6593f877eb5295f4bebd6": {
+    "date": "2025-12-31T04:12:16.503987",
+    "title": "How to Facilitate Effective AI Programming"
+  },
+  "008f10cf24ff77356c1f0b444fa22979": {
+    "date": "2025-12-31T04:12:16.503991",
+    "title": "Machine Learning vs AI Engineer: What Are the Differences?"
+  },
+  "0ca20f7fb25a8e760c2415834d7a3a17": {
+    "date": "2025-12-31T04:28:03.600302",
+    "title": "Logic Sketch Prompting (LSP): A Deterministic and Interpretable Prompting Method"
+  },
+  "ca5dc521364143116dbe8673ed4cf607": {
+    "date": "2025-12-31T04:28:03.600314",
+    "title": "SciEvalKit: An Open-source Evaluation Toolkit for Scientific General Intelligence"
+  },
+  "865785d7731a992d9e9d7c3b0bca11fc": {
+    "date": "2025-12-31T04:28:03.600318",
+    "title": "Agent2World: Learning to Generate Symbolic World Models via Adaptive Multi-Agent Feedback"
+  },
+  "e3e4e06b998030fd10685b67ab3c55fa": {
+    "date": "2025-12-31T04:28:03.600321",
+    "title": "[P] EdgeVec v0.7.0: Browser-Native Vector Database with 8.75x Faster Hamming Distance via SIMD"
+  },
+  "164ba2e6aa544c710585809280e423bb": {
+    "date": "2025-12-31T04:28:03.600326",
+    "title": "Researching Manufacturing Workflows \u2013 Looking for Ideas on Where AI Can Actually Help [R]"
+  },
+  "a51180cd56afb3a16c9b550a5d80f7d6": {
+    "date": "2025-12-31T04:28:03.600330",
+    "title": "Show HN: Vibe coding a bookshelf with Claude Code"
+  },
+  "e3bef92c3371587f215dd742badad524": {
+    "date": "2025-12-31T04:28:03.600334",
+    "title": "UK accounting body to halt remote exams amid AI cheating"
+  },
+  "a7b0a595baaf2cc074b672b15d24246e": {
+    "date": "2025-12-31T04:28:03.600340",
+    "title": "Implementing Vibe Proving with Reinforcement Learning"
+  },
+  "c402f612d8de119e416c7839fd5025da": {
+    "date": "2025-12-31T04:28:03.600345",
+    "title": "Show HN: Z80-\u03bcLM, a 'Conversational AI' That Fits in 40KB"
+  },
+  "696959f6bee7dda3b465c3b254eb46a6": {
+    "date": "2025-12-31T05:34:05.283453",
+    "title": "[R] Do AI companies pay for large proprietary language datasets?"
+  },
+  "867eb42b78a7ddab115987bdc76a393e": {
+    "date": "2025-12-31T05:34:05.283467",
+    "title": "Why inventing new emotions feels so good"
+  },
+  "3d198d507828364ed5f7fa2e71d7c9c0": {
+    "date": "2025-12-31T05:34:05.283471",
+    "title": "The phone is dead. Long live . . . what exactly?"
+  },
+  "4b427abf4500029a1b29433edf110ac4": {
+    "date": "2025-12-31T05:34:05.283475",
+    "title": "The best AI-powered dictation apps of 2025"
+  },
+  "3263b82d5f9c588283a8fc93710eacc5": {
+    "date": "2025-12-31T05:34:05.283480",
+    "title": "VCs predict enterprises will spend more on AI in 2026\u00a0\u2014\u00a0through\u00a0fewer vendors"
+  },
+  "3f8e7e230d4f43c102ff79881c206c93": {
+    "date": "2025-12-31T05:34:05.283485",
+    "title": "The ascent of the AI therapist"
+  },
+  "f804aac69d75e03ad2bcb8eeb14540fd": {
+    "date": "2025-12-31T05:34:05.283488",
+    "title": "Meta just bought Manus, an AI startup everyone has been talking about"
+  },
+  "704516dc2537609015716b0fa8f0e375": {
+    "date": "2025-12-31T05:34:05.283495",
+    "title": "2025 was the year AI got a vibe check"
+  },
+  "a41f53632164f9795a612d43f1c497cf": {
+    "date": "2025-12-31T05:34:05.283500",
+    "title": "Bangladesh\u2019s garment-making industry is getting greener"
+  },
+  "d8e03434552f51b48ceb6a67cbfa5c16": {
+    "date": "2025-12-31T05:34:19.359516",
+    "title": "Plaud Note Pro is an excellent AI-powered recorder that I carry everywhere"
+  },
+  "fae7c604c6c2f6feebfe625e8f5aa79f": {
+    "date": "2025-12-31T05:34:19.359535",
+    "title": "How to use the new ChatGPT app integrations, including DoorDash, Spotify, Uber, and others"
+  },
+  "17d5ac27e189fe97fb645e1ae1ea3771": {
+    "date": "2025-12-31T05:34:19.359542",
+    "title": "VCs predict strong enterprise AI adoption next year \u2014 again"
+  }
+}
