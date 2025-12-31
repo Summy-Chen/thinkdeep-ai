@@ -59,7 +59,7 @@ class AIDailyDigest:
         self.email_sender = EmailSender(EMAIL_CONFIG)
     
     def run(self, send_email: bool = True, save_file: bool = True, 
-            hours_back: int = 48, update_web: bool = True) -> dict:
+            hours_back: int = 48, update_web: bool = True, web_data_path: str = None) -> dict:
         """
         运行完整的简报生成流程
         
@@ -150,15 +150,22 @@ class AIDailyDigest:
                         "analysis": analysis
                     }
                     
-                    # 确保目标目录存在
-                    web_public_dir = "/home/ubuntu/ai-digest-web/client/public"
-                    os.makedirs(web_public_dir, exist_ok=True)
+                    # 如果没有提供路径，使用默认路径（本地开发环境）
+                    if not web_data_path:
+                        web_public_dir = "/home/ubuntu/ai-digest-web/client/public"
+                        os.makedirs(web_public_dir, exist_ok=True)
+                        target_path = os.path.join(web_public_dir, "data.json")
+                    else:
+                        # 使用传入的路径
+                        target_dir = os.path.dirname(web_data_path)
+                        if target_dir:
+                            os.makedirs(target_dir, exist_ok=True)
+                        target_path = web_data_path
                     
-                    web_data_path = os.path.join(web_public_dir, "data.json")
-                    with open(web_data_path, 'w', encoding='utf-8') as f:
+                    with open(target_path, 'w', encoding='utf-8') as f:
                         json.dump(web_data, f, ensure_ascii=False, indent=2)
                     
-                    logger.info(f"网页数据已更新到: {web_data_path}")
+                    logger.info(f"网页数据已更新到: {target_path}")
                 except Exception as e:
                     logger.error(f"更新网页数据失败: {e}")
             
@@ -234,6 +241,7 @@ def main():
     parser.add_argument('--hours', type=int, default=48, help='抓取多少小时内的文章（默认48）')
     parser.add_argument('--test-fetch', action='store_true', help='测试RSS抓取')
     parser.add_argument('--test-email', action='store_true', help='测试邮件发送')
+    parser.add_argument('--update-web-path', type=str, help='更新网页数据文件路径')
     
     args = parser.parse_args()
     
@@ -251,7 +259,9 @@ def main():
         result = digest.run(
             send_email=not args.no_email,
             save_file=not args.no_save,
-            hours_back=args.hours
+            hours_back=args.hours,
+            update_web=args.update_web_path is not None,
+            web_data_path=args.update_web_path
         )
         
         print("\n" + "=" * 50)
