@@ -1,17 +1,18 @@
 """
 LLM 分析模块
-使用大语言模型对文章进行智能分析和摘要
+使用 Google Gemini 模型对文章进行智能分析和摘要
 """
 
 import os
 import logging
+import json
+import google.generativeai as genai
 from typing import List, Dict, Optional
-from openai import OpenAI
 
 logger = logging.getLogger(__name__)
 
 class LLMAnalyzer:
-    """使用LLM进行内容分析"""
+    """使用 Google Gemini 进行内容分析"""
     
     def __init__(self, model: str = None, max_tokens: int = None):
         """
@@ -21,10 +22,17 @@ class LLMAnalyzer:
             model: 使用的模型名称
             max_tokens: 最大token数
         """
-        from config import LLM_CONFIG
-        self.model = model or LLM_CONFIG.get('model', 'gpt-4.1-mini')
-        self.max_tokens = max_tokens or LLM_CONFIG.get('max_tokens', 1000)
-        self.client = OpenAI()  # 使用环境变量中的API Key
+        # 从环境变量获取 API Key
+        api_key = os.environ.get("GEMINI_API_KEY")
+        if not api_key:
+            logger.warning("未找到 GEMINI_API_KEY 环境变量，LLM 功能将不可用")
+            self.client = None
+        else:
+            genai.configure(api_key=api_key)
+            self.model_name = model or "gemini-1.5-flash"
+            self.client = genai.GenerativeModel(self.model_name)
+            
+        self.max_tokens = max_tokens or 2000
     
     def summarize_article(self, article: Dict) -> str:
         """
@@ -36,6 +44,9 @@ class LLMAnalyzer:
         Returns:
             中文摘要
         """
+        if not self.client:
+            return article.get('summary', '')[:200] + '...'
+
         try:
             prompt = f"""请用简洁的中文总结以下AI领域文章的核心内容，突出关键技术点和重要发现。
 摘要应该在2-3句话内，适合非技术背景的读者理解。
@@ -46,17 +57,15 @@ class LLMAnalyzer:
 
 请直接输出中文摘要，不要有任何前缀："""
 
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": "你是一位专业的AI技术编辑，擅长将复杂的技术内容转化为通俗易懂的中文摘要。"},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=200,
-                temperature=0.3
+            response = self.client.generate_content(
+                prompt,
+                generation_config=genai.types.GenerationConfig(
+                    max_output_tokens=200,
+                    temperature=0.3
+                )
             )
             
-            return response.choices[0].message.content.strip()
+            return response.text.strip()
             
         except Exception as e:
             logger.warning(f"生成摘要失败: {e}")
@@ -79,6 +88,14 @@ class LLMAnalyzer:
                 "highlights": [],
                 "trends": []
             }
+            
+        if not self.client:
+            return {
+                "overview": f"今日共收集到 {len(articles)} 篇AI领域相关文章（LLM未配置）。",
+                "highlights": [a['title'] for a in articles[:3]],
+                "trends": ["请配置 GEMINI_API_KEY 以获取智能分析"],
+                "recommendation": articles[0]['title'] if articles else ""
+            }
         
         try:
             # 准备文章摘要
@@ -99,22 +116,20 @@ class LLMAnalyzer:
     "recommendation": "今日最值得关注的一篇文章标题及原因"
 }}
 
-请确保输出是有效的JSON格式："""
+请确保输出是有效的JSON格式，不要包含Markdown代码块标记："""
 
-            response = self.client.chat.completions.create(
-                model=self.model,
-                messages=[
-                    {"role": "system", "content": "你是一位资深AI行业分析师，擅长从海量信息中提炼关键洞察。请用JSON格式输出分析结果。"},
-                    {"role": "user", "content": prompt}
-                ],
-                max_tokens=self.max_tokens,
-                temperature=0.5
+            response = self.client.generate_content(
+                prompt,
+                generation_config=genai.types.GenerationConfig(
+                    max_output_tokens=self.max_tokens,
+                    temperature=0.5,
+                    response_mime_type="application/json"
+                )
             )
             
-            import json
-            result_text = response.choices[0].message.content.strip()
+            result_text = response.text.strip()
             
-            # 尝试提取JSON
+            # 清理可能存在的 Markdown 标记
             if "```json" in result_text:
                 result_text = result_text.split("```json")[1].split("```")[0]
             elif "```" in result_text:
@@ -127,7 +142,7 @@ class LLMAnalyzer:
             return {
                 "overview": f"今日共收集到 {len(articles)} 篇AI领域相关文章。",
                 "highlights": [a['title'] for a in articles[:3]],
-                "trends": ["请查看详细文章列表了解更多"],
+                "trends": ["分析生成失败，请查看详细列表"],
                 "recommendation": articles[0]['title'] if articles else ""
             }
     
@@ -142,9 +157,9 @@ class LLMAnalyzer:
             分类后的文章字典
         """
         categories = {
-            "大语言模型": [],
+            "商业前沿": [],
+            "技术硬核": [],
             "AI应用与产品": [],
-            "研究与论文": [],
             "行业动态": [],
             "其他": []
         }
@@ -153,16 +168,18 @@ class LLMAnalyzer:
             title_lower = article.get('title', '').lower()
             summary_lower = article.get('summary', '').lower()
             source_category = article.get('category', '')
+            source_name = article.get('source_name', '').lower()
             
-            # 基于关键词和来源分类
-            if any(kw in title_lower or kw in summary_lower 
-                   for kw in ['llm', 'gpt', 'claude', 'gemini', 'language model', 'transformer', 'chatgpt']):
-                categories["大语言模型"].append(article)
+            # 商业类优先
+            if source_category == 'business' or any(kw in source_name for kw in ['techcrunch', 'venturebeat', 'information']):
+                categories["商业前沿"].append(article)
+            # 技术类
+            elif source_category == 'research' or 'arxiv' in article.get('source_id', '') or 'hugging face' in source_name:
+                categories["技术硬核"].append(article)
+            # 其他分类逻辑
             elif any(kw in title_lower or kw in summary_lower 
                      for kw in ['launch', 'release', 'product', 'app', 'tool', 'api']):
                 categories["AI应用与产品"].append(article)
-            elif source_category == 'research' or 'arxiv' in article.get('source_id', ''):
-                categories["研究与论文"].append(article)
             elif source_category == 'company' or any(kw in title_lower 
                      for kw in ['openai', 'google', 'microsoft', 'anthropic', 'meta']):
                 categories["行业动态"].append(article)
@@ -172,20 +189,6 @@ class LLMAnalyzer:
         # 移除空分类
         return {k: v for k, v in categories.items() if v}
 
-
-def test_analyzer():
-    """测试分析器"""
-    analyzer = LLMAnalyzer()
-    
-    test_article = {
-        "title": "OpenAI Releases GPT-5 with Enhanced Reasoning",
-        "source_name": "OpenAI Blog",
-        "summary": "OpenAI has announced the release of GPT-5, featuring significantly improved reasoning capabilities and reduced hallucinations. The new model demonstrates state-of-the-art performance on complex problem-solving tasks."
-    }
-    
-    summary = analyzer.summarize_article(test_article)
-    print(f"摘要: {summary}")
-
-
 if __name__ == "__main__":
-    test_analyzer()
+    # 简单的本地测试
+    print("LLMAnalyzer (Gemini Edition) initialized.")
