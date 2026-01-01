@@ -9,6 +9,7 @@ import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 const plugins = [react(), tailwindcss(), vitePluginManusRuntime()];
 
 export default defineConfig({
+  base: "/thinkdeep-ai/", // GitHub Pages 需要设置 base 路径
   plugins,
   resolve: {
     alias: {
