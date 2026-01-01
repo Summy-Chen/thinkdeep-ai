@@ -2,6 +2,18 @@
   "date": "2026-01-01",
   "articles": [
     {
+      "id": "e786a04c0a73f1c0cf0b9e413c8f8ea3",
+      "title": "‘College dropout’ has become the most coveted startup founder credential",
+      "link": "https://techcrunch.com/2025/12/31/college-dropout-has-become-the-most-coveted-startup-founder-credential/",
+      "summary": "AI founders are increasingly using their \"dropout\" status as a credential during YC pitches.",
+      "published": "2026-01-01T02:44:02+00:00",
+      "source_id": "techcrunch_ai",
+      "source_name": "TechCrunch AI",
+      "category": "business",
+      "priority": 1,
+      "chinese_summary": "AI founders are increasingly using their \"dropout\" status as a credential during YC pitches."
+    },
+    {
       "id": "a7fca28e684c4c8da30b29bb6219d617",
       "title": "2025: The year in LLMs",
       "link": "https://simonwillison.net/2025/Dec/31/the-year-in-llms/#atom-everything",
@@ -52,25 +64,25 @@
       "id": "bb0a1dcd6e3b17e150796679af520e94",
       "title": "OpenAI is paying employees more than any major tech startup in history",
       "link": "https://www.wsj.com/tech/ai/openai-is-paying-employees-more-than-any-major-tech-startup-in-history-23472527",
-      "summary": "Article URL: https://www.wsj.com/tech/ai/openai-is-paying-employees-more-than-any-major-tech-startup-in-history-23472527 Comments URL: https://news.ycombinator.com/item?id=46444367 Points: 73 # Comments: 63",
+      "summary": "Article URL: https://www.wsj.com/tech/ai/openai-is-paying-employees-more-than-any-major-tech-startup-in-history-23472527 Comments URL: https://news.ycombinator.com/item?id=46444367 Points: 76 # Comments: 63",
       "published": "2025-12-31T14:33:40+00:00",
       "source_id": "hn_ai",
       "source_name": "Hacker News AI",
       "category": "community",
       "priority": 2,
-      "chinese_summary": "Article URL: https://www.wsj.com/tech/ai/openai-is-paying-employees-more-than-any-major-tech-startup-in-history-23472527 Comments URL: https://news.ycombinator.com/item?id=46444367 Points: 73 # Commen..."
+      "chinese_summary": "Article URL: https://www.wsj.com/tech/ai/openai-is-paying-employees-more-than-any-major-tech-startup-in-history-23472527 Comments URL: https://news.ycombinator.com/item?id=46444367 Points: 76 # Commen..."
     },
     {
       "id": "8e60b39b4ba49a365ccf14116f3e2dd8",
       "title": "How AI labs are solving the power problem",
       "link": "https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power",
-      "summary": "Article URL: https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power Comments URL: https://news.ycombinator.com/item?id=46444020 Points: 121 # Comments: 199",
+      "summary": "Article URL: https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power Comments URL: https://news.ycombinator.com/item?id=46444020 Points: 133 # Comments: 204",
       "published": "2025-12-31T13:50:41+00:00",
       "source_id": "hn_ai",
       "source_name": "Hacker News AI",
       "category": "community",
       "priority": 2,
-      "chinese_summary": "Article URL: https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power Comments URL: https://news.ycombinator.com/item?id=46444020 Points: 121 # Comments: 199"
+      "chinese_summary": "Article URL: https://newsletter.semianalysis.com/p/how-ai-labs-are-solving-the-power Comments URL: https://news.ycombinator.com/item?id=46444020 Points: 133 # Comments: 204"
     },
     {
       "id": "73fd44a5e09f6e5d3288b496ab01947e",
@@ -87,19 +99,19 @@
       "id": "68286a9b63eae9b508d19ebb02231166",
       "title": "Claude wrote a functional NES emulator using my engine's API",
       "link": "https://carimbo.games/games/nintendo/",
-      "summary": "Article URL: https://carimbo.games/games/nintendo/ Comments URL: https://news.ycombinator.com/item?id=46443767 Points: 73 # Comments: 83",
+      "summary": "Article URL: https://carimbo.games/games/nintendo/ Comments URL: https://news.ycombinator.com/item?id=46443767 Points: 74 # Comments: 84",
       "published": "2025-12-31T13:07:22+00:00",
       "source_id": "hn_ai",
       "source_name": "Hacker News AI",
       "category": "community",
       "priority": 2,
-      "chinese_summary": "Article URL: https://carimbo.games/games/nintendo/ Comments URL: https://news.ycombinator.com/item?id=46443767 Points: 73 # Comments: 83"
+      "chinese_summary": "Article URL: https://carimbo.games/games/nintendo/ Comments URL: https://news.ycombinator.com/item?id=46443767 Points: 74 # Comments: 84"
     },
     {
       "id": "3bf3dada645f377e917d8e4838c5a3b5",
       "title": "AI-generated videos showing young and attractive women promote Poland's EU exit",
       "link": "https://www.euronews.com/2025/12/30/ai-generated-videos-showing-young-and-attractive-women-promote-polands-eu-exit",
-      "summary": "Article URL: https://www.euronews.com/2025/12/30/ai-generated-videos-showing-young-and-attractive-women-promote-polands-eu-exit Comments URL: https://news.ycombinator.com/item?id=46442981 Points: 51 # Comments: 41",
+      "summary": "Article URL: https://www.euronews.com/2025/12/30/ai-generated-videos-showing-young-and-attractive-women-promote-polands-eu-exit Comments URL: https://news.ycombinator.com/item?id=46442981 Points: 51 # Comments: 42",
       "published": "2025-12-31T10:28:30+00:00",
       "source_id": "hn_ai",
       "source_name": "Hacker News AI",
@@ -121,15 +133,15 @@
     }
   ],
   "analysis": {
-    "overview": "今日共收集到 10 篇AI领域相关文章。",
+    "overview": "今日共收集到 11 篇AI领域相关文章。",
     "highlights": [
+      "‘College dropout’ has become the most coveted startup founder credential",
       "2025: The year in LLMs",
-      "Investors predict AI is coming for labor in 2026",
-      "Codex cloud is now called Codex web"
+      "Investors predict AI is coming for labor in 2026"
     ],
     "trends": [
       "分析生成失败，请查看详细列表"
     ],
-    "recommendation": "2025: The year in LLMs"
+    "recommendation": "‘College dropout’ has become the most coveted startup founder credential"
   }
 }
