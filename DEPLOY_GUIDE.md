@@ -29,7 +29,7 @@
 
 | Name | Value (填入您的具体信息) |
 | :--- | :--- |
-| `OPENAI_API_KEY` | 您的 OpenAI API Key (或兼容的 API Key) |
+| `GEMINI_API_KEY` | 您的 Google Gemini API Key |
 | `EMAIL_SENDER` | `chenysh48@foxmail.com` |
 | `EMAIL_PASSWORD` | `byxjmepqwtnycabc` |
 | `EMAIL_RECIPIENT` | `chenysh48@foxmail.com` |
