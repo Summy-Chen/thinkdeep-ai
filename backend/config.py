@@ -42,9 +42,10 @@ RSS_FEEDS = {
     },
     "wired_ai": {
         "name": "Wired AI",
-        "url": "https://www.wired.com/feed/category/ai/latest/rss",
+        "url": "https://www.wired.com/feed/rss",
         "category": "business",
         "priority": 2,
+        "hours_back_override": 48,  # Wired 更新频率较低，使用更长的时间窗口
     },
 
     # AI公司官方博客
@@ -74,7 +75,7 @@ RSS_FEEDS = {
     },
     "anthropic": {
         "name": "Anthropic",
-        "url": "https://www.anthropic.com/index.xml",
+        "url": "https://www.anthropic.com/news/rss",
         "category": "company",
         "priority": 1,
     },
@@ -155,7 +156,16 @@ SYSTEM_CONFIG = {
     "data_dir": "data",                  # 数据存储目录
     "output_dir": "output",              # 输出目录
     "log_dir": "logs",                   # 日志目录
-    "hours_back": 24,                    # 仅抓取最近24小时的文章，提升时效性
+    "hours_back": 48,                    # 默认抓取最近48小时的文章（提升抓取成功率）
+    "hours_back_by_category": {          # 根据类别调整时间窗口
+        "business": 48,                  # 商业新闻：48小时
+        "company": 72,                   # 公司博客：72小时（更新频率较低）
+        "research": 168,                 # 学术研究：7天（论文发布周期较长）
+        "blog": 72,                      # 技术博客：72小时
+        "community": 24,                 # 社区：24小时（更新频繁）
+    },
+    "retry_attempts": 3,                # 重试次数
+    "retry_delay": 2,                    # 重试延迟（秒）
     "user_agent": "ThinkDeep.ai/1.0 (AI Digest Bot)"
 }
 

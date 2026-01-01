@@ -88,7 +88,9 @@ class AIDailyDigest:
             logger.info("步骤 1/4: 抓取RSS源...")
             articles = self.fetcher.fetch_all_feeds(
                 max_articles_per_source=SYSTEM_CONFIG.get('max_articles_per_source', 5),
-                hours_back=hours_back
+                hours_back=hours_back,
+                retry_attempts=SYSTEM_CONFIG.get('retry_attempts', 3),
+                retry_delay=SYSTEM_CONFIG.get('retry_delay', 2)
             )
             
             if not articles:

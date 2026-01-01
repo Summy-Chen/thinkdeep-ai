@@ -15,8 +15,9 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // 尝试加载真实数据
-    fetch('/data.json')
+    // 尝试加载真实数据（使用 base 路径）
+    const basePath = import.meta.env.BASE_URL || '/thinkdeep-ai/';
+    fetch(basePath + 'data.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to load data');
         return res.json();

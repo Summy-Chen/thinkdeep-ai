@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // GitHub Pages SPA 路由处理
+    // 适配 base 路径 /thinkdeep-ai/
+    // 当访问任何路径时，都重定向到 index.html，让前端路由处理
+    var basePath = '/thinkdeep-ai';
+    var l = window.location;
+    var path = l.pathname;
+    
+    // 构建重定向 URL
+    var redirectUrl = basePath + '/index.html';
+    
+    // 保留查询参数和 hash
+    if (l.search) {
+      redirectUrl += l.search;
+    }
+    if (l.hash) {
+      redirectUrl += l.hash;
+    }
+    
+    // 立即重定向
+    l.replace(redirectUrl);
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+  <script>
+    // 如果 JavaScript 被禁用，显示备用内容
+    setTimeout(function() {
+      window.location.href = '/thinkdeep-ai/';
+    }, 100);
+  </script>
+</body>
+</html>
+
