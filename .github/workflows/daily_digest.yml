@@ -72,12 +72,38 @@ jobs:
       - name: Build frontend
         run: |
           cd frontend
+          echo "开始构建前端..."
           pnpm run build
+          echo "构建完成，检查输出..."
+          # 检查构建输出
+          if [ -d "dist/public" ]; then
+            echo "✅ dist/public 目录存在"
+            ls -la dist/public/ | head -10
+            echo "文件数量: $(find dist/public -type f | wc -l)"
+          else
+            echo "❌ dist/public 目录不存在"
+            echo "查找 dist 目录内容:"
+            ls -la dist/ || echo "dist 目录也不存在"
+            exit 1
+          fi
+          
+      - name: Prepare deployment directory
+        run: |
           # 将构建产物移动到根目录的 public 文件夹，供 GitHub Pages 使用
-          # vite.config.ts 输出到 dist/public，所以需要复制 dist/public 的内容
-          mkdir -p ../public
-          # 使用 find 和 cp 确保复制所有文件（包括隐藏文件）
-          find dist/public -mindepth 1 -maxdepth 1 -exec cp -r {} ../public/ \;
+          mkdir -p public
+          if [ -d "frontend/dist/public" ] && [ "$(ls -A frontend/dist/public)" ]; then
+            echo "复制构建产物到 public 目录..."
+            cp -r frontend/dist/public/* public/ 2>/dev/null || cp -r frontend/dist/public/. public/
+            echo "✅ 构建产物复制完成"
+            echo "public 目录内容:"
+            ls -la public/ | head -15
+            echo "文件总数: $(find public -type f | wc -l)"
+          else
+            echo "❌ 错误: frontend/dist/public 目录不存在或为空"
+            echo "当前目录结构:"
+            find frontend -type d -name "dist" -o -name "public" | head -10
+            exit 1
+          fi
 
       - name: Deploy to GitHub Pages
         id: deployment
